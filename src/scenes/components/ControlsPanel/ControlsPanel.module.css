@@ -1,0 +1,13 @@
+.ControlsPanel {
+    border: 1px solid #ddd;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: auto;
+    padding: 2em 0;
+}
+
+.ControlsPanel h2 {
+    margin-bottom: 1em;
+}

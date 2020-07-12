@@ -1,0 +1,24 @@
+.Control {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.Control p {
+    text-align: center;
+    width: 50px;
+    margin: 0 auto;
+}
+
+.Control button {
+    display: block;
+    font: inherit;
+    margin: 0 5px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
