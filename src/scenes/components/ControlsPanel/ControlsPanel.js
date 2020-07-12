@@ -5,7 +5,8 @@ import classes from "./ControlsPanel.module.css";
 const ControlsPanel = ({
   ingredients,
   adjustIngredientHandler,
-  disabledInfo,
+  disabledAdd,
+  disabledRemove,
   totalPrice,
 }) => {
   const displayControls = Object.keys(ingredients).map((ingredientKey) => (
@@ -14,13 +15,16 @@ const ControlsPanel = ({
       label={ingredientKey}
       quantity={ingredients[ingredientKey]}
       adjustIngredients={adjustIngredientHandler}
-      disabledInfo={disabledInfo[ingredientKey]}
+      disabledAdd={disabledAdd[ingredientKey]}
+      disabledRemove={disabledRemove[ingredientKey]}
     />
   ));
   return (
     <div className={classes.ControlsPanel}>
       <h2>Total Price: {totalPrice.toFixed(2)}</h2>
       {displayControls}
+      <button>Reset</button>
+      <button>Checkout</button>
     </div>
   );
 };

@@ -13,12 +13,20 @@
 }
 
 .Control button {
+    background-color: #AEEA00;
     display: block;
     font: inherit;
     margin: 0 5px;
     width: 30px;
-    border: 1px solid black;
+    height: 30px;
+    border: 0;
     border-radius: 50%;
     cursor: pointer;
     outline: none;
+}
+
+.Control button:disabled{
+    color: #aaa;
+    background-color: #eee;
+    border-color: #ddd;
 }

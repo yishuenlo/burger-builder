@@ -6,7 +6,7 @@ import classes from "./BurgerBuilder.module.css";
 const INGREDIENT_PRICES = {
   salad: 0.5,
   cheese: 0.4,
-  meat: 2.5,
+  meat: 3.5,
   bacon: 0.75,
 };
 
@@ -18,8 +18,35 @@ class BurgerBuilder extends Component {
       bacon: 1,
       meat: 1,
     },
-    purchased: false,
-    totalPrice: 6.5,
+    disabledAdd: {
+      salad: false,
+      cheese: false,
+      bacon: false,
+      meat: false,
+    },
+    disabledRemove: {
+      salad: false,
+      cheese: false,
+      bacon: false,
+      meat: false,
+    },
+    purchasable: false,
+    totalPrice: 10.5,
+  };
+
+  //disabled buttons based on ingredient quantities
+  checkIngredientsQuant = (ingredients) => {
+    const updatedDisabledAdd = { ...this.state.disabledAdd };
+    const updatedDisabledRemove = { ...this.state.disabledRemove };
+    for (let key in ingredients) {
+      //if more than 2, disable add button
+      updatedDisabledAdd[key] = ingredients[key] > 2;
+      updatedDisabledRemove[key] = ingredients[key] <= 0;
+    }
+    this.setState({
+      disabledAdd: updatedDisabledAdd,
+      disabledRemove: updatedDisabledRemove,
+    });
   };
 
   adjustIngredientHandler = (type, action) => {
@@ -47,6 +74,8 @@ class BurgerBuilder extends Component {
         ? prevPrice - INGREDIENT_PRICES[type]
         : prevPrice;
 
+    this.checkIngredientsQuant(updatedIngredients);
+
     //update state
     this.setState({
       ingredients: updatedIngredients,
@@ -55,14 +84,6 @@ class BurgerBuilder extends Component {
   };
 
   render() {
-    //keep track quantity, using boolean values
-    const disabledInfo = {...this.state.ingredients};
-    for(let key in disabledInfo){
-        disabledInfo[key] = disabledInfo[key] <= 0 || disabledInfo[key] > 2;
-    }
-
-    console.log(disabledInfo);
-
     return (
       <article className={classes.BurgerBuilder}>
         <Burger ingredients={this.state.ingredients} />
@@ -70,7 +91,8 @@ class BurgerBuilder extends Component {
           totalPrice={this.state.totalPrice}
           ingredients={this.state.ingredients}
           adjustIngredientHandler={this.adjustIngredientHandler}
-          disabledInfo={disabledInfo}
+          disabledAdd={this.state.disabledAdd}
+          disabledRemove={this.state.disabledRemove}
         />
       </article>
     );
