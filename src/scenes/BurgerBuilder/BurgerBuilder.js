@@ -4,43 +4,58 @@ import ControlsPanel from "../components/ControlsPanel/ControlsPanel";
 import classes from "./BurgerBuilder.module.css";
 
 const INGREDIENT_PRICES = {
-  salad: 0.5,
-  cheese: 0.4,
-  meat: 3.5,
+  lettuce: 0.25,
+  onion: 0.25,
+  pickle: 0.75,
+  tomato: 0.5,
+  egg: 0.75,
   bacon: 0.75,
+  cheese: 0.5,
+  protein: 3.75,
 };
 
 class BurgerBuilder extends Component {
   state = {
     ingredients: {
-      salad: 1,
-      cheese: 1,
+      lettuce: 1,
+      onion: 1,
+      pickle: 1,
+      tomato: 1,
+      egg: 1,
       bacon: 1,
-      meat: 1,
+      cheese: 1,
+      protein: 1,
     },
     disabledAdd: {
-      salad: false,
+      lettuce: false,
       cheese: false,
       bacon: false,
-      meat: false,
+      protein: false,
     },
     disabledRemove: {
-      salad: false,
+      lettuce: false,
       cheese: false,
       bacon: false,
-      meat: false,
+      protein: false,
     },
     purchasable: false,
-    totalPrice: 10.5,
+    totalPrice: 16.8,
   };
 
   //disabled buttons based on ingredient quantities
   checkIngredientsQuant = (ingredients) => {
     const updatedDisabledAdd = { ...this.state.disabledAdd };
     const updatedDisabledRemove = { ...this.state.disabledRemove };
+
+    //set total ingredients to limit of 10
+    const totalIngredients = Object.values(ingredients).reduce(
+      (sum, cur) => sum + cur
+    );
+
     for (let key in ingredients) {
-      //if more than 2, disable add button
-      updatedDisabledAdd[key] = ingredients[key] > 2;
+      //if more than 2 for each ingredient, disable add button OR
+      //if more than 10, disable ALL add buttons
+      updatedDisabledAdd[key] = ingredients[key] > 1 || totalIngredients >= 10;
       updatedDisabledRemove[key] = ingredients[key] <= 0;
     }
     this.setState({

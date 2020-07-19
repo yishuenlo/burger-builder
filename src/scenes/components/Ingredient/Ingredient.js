@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import classes from "./Ingredient.module.css";
 
+//rendering ingredients in Burger using CSS
 const Ingredient = ({ type }) => {
   let style = null;
 
@@ -13,17 +14,29 @@ const Ingredient = ({ type }) => {
     case "bread-bottom":
       style = classes.BreadBottom;
       break;
-    case "meat":
-      style = classes.Meat;
+    case "lettuce":
+      style = classes.Lettuce;
+      break;
+    case "onion":
+      style = classes.Onion;
+      break;
+    case "pickle":
+      style = classes.Pickle;
+      break;
+    case "tomato":
+      style = classes.Tomato;
+      break;
+    case "egg":
+      style = classes.Egg;
+      break;
+    case "bacon":
+      style = classes.Bacon;
       break;
     case "cheese":
       style = classes.Cheese;
       break;
-    case "salad":
-      style = classes.Salad;
-      break;
-    case "bacon":
-      style = classes.Bacon;
+    case "protein":
+      style = classes.Protein;
       break;
   }
 
@@ -33,6 +46,5 @@ const Ingredient = ({ type }) => {
 Ingredient.prototype = {
     type: PropTypes.string
 }
-
 
 export default Ingredient;

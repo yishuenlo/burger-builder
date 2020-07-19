@@ -1,43 +1,75 @@
 .BreadBottom {
-    height: 71px;
-    width: 400px;
-    background: url(../../../assets/breadBottom.svg);
-    margin: -10px auto;
-}
-
-.BreadTop {
-    height: 157px;
-    width: 400px;
-    background: url(../../../assets/breadTop.svg);
-    background-size: 400px 157px;
+    width: 300px;
+    height: 53px;
+    background: url(../../../assets/burger-ingredients/breadBottom.svg);
     margin: 0 auto;
     position: relative;
 }
 
-.Meat {
-    width: 400px;
-    height: 71px;
-    background: url(../../../assets/meat.svg);
-    margin: -10px auto;
+.BreadTop {
+    width: 300px;
+    height: 110px;
+    background: url(../../../assets/burger-ingredients/breadTop.svg);
+    margin: -5px auto;
+    position: relative;
 }
 
-.Cheese {
-    width: 400px;
-    height: 39px;
-    margin: -10px auto;
-    background: url(../../../assets/cheese.svg);
+.Lettuce {
+    width: 300px;
+    height: 30px;
+    margin: -5px auto;
+    background: url(../../../assets/burger-ingredients/lettuce.svg);
 }
 
-.Salad {
-    width: 400px;
-    height: 39px;
-    margin: -10px auto;
-    background: url(../../../assets/salad.svg);
+.Onion {
+    width: 295px;
+    height: 17px;
+    background: url(../../../assets/burger-ingredients/onion.svg);
+    margin: -5px auto;
+}
+
+.Pickle {
+    width: 295px;
+    height: 17px;
+    background: url(../../../assets/burger-ingredients/pickle.svg);
+    margin: -5px auto;
+}
+
+.Tomato {
+    width: 295px;
+    height: 17px;
+    background: url(../../../assets/burger-ingredients/tomato.svg);
+    margin: -5px auto;
+}
+
+.Egg {
+    width: 300px;
+    height: 28.5px;
+    background: url(../../../assets/burger-ingredients/egg.svg);
+    margin: -5px auto;
 }
 
 .Bacon {
-    width: 400px;
-    height: 48px;
-    background: url(../../../assets/bacon.svg);
-    margin: -10px auto;
+    width: 300px;
+    height: 30px;
+    background: url(../../../assets/burger-ingredients/bacon.svg);
+    margin: -5px auto;
 }
+
+.Cheese {
+    width: 300px;
+    height: 17px;
+    margin: -5px auto;
+    background: url(../../../assets/burger-ingredients/cheese.svg);
+}
+
+.Protein {
+    width: 300px;
+    height: 53px;
+    background: url(../../../assets/burger-ingredients/protein.svg);
+    margin: -5px auto;
+}
+
+
+
+
