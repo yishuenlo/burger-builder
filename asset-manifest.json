@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/burger-bulider/static/css/main.59320b10.chunk.css",
-    "main.js": "/burger-bulider/static/js/main.17ad2c9a.chunk.js",
-    "main.js.map": "/burger-bulider/static/js/main.17ad2c9a.chunk.js.map",
+    "main.css": "/burger-bulider/static/css/main.98c4f751.chunk.css",
+    "main.js": "/burger-bulider/static/js/main.64d521b5.chunk.js",
+    "main.js.map": "/burger-bulider/static/js/main.64d521b5.chunk.js.map",
     "runtime-main.js": "/burger-bulider/static/js/runtime-main.10b8273c.js",
     "runtime-main.js.map": "/burger-bulider/static/js/runtime-main.10b8273c.js.map",
     "static/js/2.a45b7ad1.chunk.js": "/burger-bulider/static/js/2.a45b7ad1.chunk.js",
     "static/js/2.a45b7ad1.chunk.js.map": "/burger-bulider/static/js/2.a45b7ad1.chunk.js.map",
     "index.html": "/burger-bulider/index.html",
-    "precache-manifest.33dc5749c20d7f9bb3d92dec81ad5a0b.js": "/burger-bulider/precache-manifest.33dc5749c20d7f9bb3d92dec81ad5a0b.js",
+    "precache-manifest.ff1c337f518f81895234c8961dfe1995.js": "/burger-bulider/precache-manifest.ff1c337f518f81895234c8961dfe1995.js",
     "service-worker.js": "/burger-bulider/service-worker.js",
-    "static/css/main.59320b10.chunk.css.map": "/burger-bulider/static/css/main.59320b10.chunk.css.map",
+    "static/css/main.98c4f751.chunk.css.map": "/burger-bulider/static/css/main.98c4f751.chunk.css.map",
     "static/js/2.a45b7ad1.chunk.js.LICENSE.txt": "/burger-bulider/static/js/2.a45b7ad1.chunk.js.LICENSE.txt",
     "static/media/Burger.module.css": "/burger-bulider/static/media/background.a5915259.svg",
     "static/media/bacon.svg": "/burger-bulider/static/media/bacon.ab5dc788.svg",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.10b8273c.js",
     "static/js/2.a45b7ad1.chunk.js",
-    "static/css/main.59320b10.chunk.css",
-    "static/js/main.17ad2c9a.chunk.js"
+    "static/css/main.98c4f751.chunk.css",
+    "static/js/main.64d521b5.chunk.js"
   ]
 }
