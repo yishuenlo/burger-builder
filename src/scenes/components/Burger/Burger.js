@@ -18,10 +18,12 @@ const Burger = ({ ingredients }) => {
     displayIngredients = <p style={{margin: '3em 0'}}>Please start adding ingredients</p>;
 
   return (
-    <div className={classes.Burger}>
-      <Ingredient type="bread-top" />
-      {displayIngredients}
-      <Ingredient type="bread-bottom" />
+    <div className={classes.WholeBurger}>
+      <div className={classes.Burger}>
+        <Ingredient type="bread-top" />
+        {displayIngredients}
+        <Ingredient type="bread-bottom" />
+      </div>
       <img className={classes.Shadow} src={shadow}></img>
     </div>
   );
