@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/burger-bulider/static/css/main.a646a2ad.chunk.css",
+    "main.css": "/burger-bulider/static/css/main.3aff9946.chunk.css",
     "main.js": "/burger-bulider/static/js/main.a6dea8a1.chunk.js",
     "main.js.map": "/burger-bulider/static/js/main.a6dea8a1.chunk.js.map",
     "runtime-main.js": "/burger-bulider/static/js/runtime-main.10b8273c.js",
@@ -8,9 +8,9 @@
     "static/js/2.5cc616aa.chunk.js": "/burger-bulider/static/js/2.5cc616aa.chunk.js",
     "static/js/2.5cc616aa.chunk.js.map": "/burger-bulider/static/js/2.5cc616aa.chunk.js.map",
     "index.html": "/burger-bulider/index.html",
-    "precache-manifest.9537c759f7ae3458e543373fecc44f8f.js": "/burger-bulider/precache-manifest.9537c759f7ae3458e543373fecc44f8f.js",
+    "precache-manifest.c2abb49a4a9f8680816450affd86b1f1.js": "/burger-bulider/precache-manifest.c2abb49a4a9f8680816450affd86b1f1.js",
     "service-worker.js": "/burger-bulider/service-worker.js",
-    "static/css/main.a646a2ad.chunk.css.map": "/burger-bulider/static/css/main.a646a2ad.chunk.css.map",
+    "static/css/main.3aff9946.chunk.css.map": "/burger-bulider/static/css/main.3aff9946.chunk.css.map",
     "static/js/2.5cc616aa.chunk.js.LICENSE.txt": "/burger-bulider/static/js/2.5cc616aa.chunk.js.LICENSE.txt",
     "static/media/Burger.module.css": "/burger-bulider/static/media/background.a5915259.svg",
     "static/media/bacon.svg": "/burger-bulider/static/media/bacon.ab5dc788.svg",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.10b8273c.js",
     "static/js/2.5cc616aa.chunk.js",
-    "static/css/main.a646a2ad.chunk.css",
+    "static/css/main.3aff9946.chunk.css",
     "static/js/main.a6dea8a1.chunk.js"
   ]
 }
