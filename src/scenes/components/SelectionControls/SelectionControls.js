@@ -27,13 +27,13 @@ const SelectionControls = ({
 
   const warningMessage =
     totalIngredients >= 10 ? (
-      <p className={classes.Warning}>You've reached your total ingredient limits.</p>
+      <p className={classes.Warning}>You've reached your total ingredient limit.</p>
     ) : null;
 
   return (
     <div className={classes.SelectionControls}>
       <h2 className={classes.TotalPrice}>${totalPrice.toFixed(2)}</h2>
-      <p>Total Ingredients Used: ${totalIngredients}/10</p>
+      <p>Total Ingredients Used: {totalIngredients}/10</p>
       {warningMessage}
       <div className={classes.SelectionContainer}>{displayControls}</div>
       <button>Reset</button>

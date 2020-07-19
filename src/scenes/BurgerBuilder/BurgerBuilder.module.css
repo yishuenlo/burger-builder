@@ -1,52 +1,74 @@
-.BurgerBuilder{
-    width: 80%;
-    max-width: 1150px;
-    text-align: left;
-    margin: 0 auto;
-    padding: 0;
-    display: grid;
-    grid-template-areas: 
-        "burger burger burger title"
-        "burger burger burger selection";
+.BurgerBuilder {
+  width: 80%;
+  max-width: 1100px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-areas:
+    "burger burger burger title"
+    "burger burger burger selection"
+    "burger burger burger selection";
 }
 
-.Burger{
-    grid-area: burger;
-    align-self: center;
-    min-height: 100vh;
+.Burger {
+  grid-area: burger;
+  /* min-height: 100vh; */
+  display: grid;
+  align-items: center;
 }
 
-.TitleContainer{
-    grid-area: title;
+.TitleContainer {
+  grid-area: title;
+  display: grid;
+  align-items: flex-end;
 }
 
-.SelectionControls{
-    grid-area: selection;
+.SelectionControls {
+  grid-area: selection;
 }
 
 .Title {
-    width: 20%;
-    font-size: 3em;
-    font-weight: 700;
-    line-height: 0.8em;
-    margin-bottom: 0.2em;
+  width: 20%;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 0.8em;
+  margin-bottom: 0.2em;
 }
 
-.SubTitle{
-    font-size: 3em;
-    font-family: 'Reenie Beanie', cursive;
-    line-height: 1em;
+.SubTitle {
+  font-size: 3em;
+  font-family: "Reenie Beanie", cursive;
+  line-height: 1em;
 }
 
-.Description{
-    font-style: italic;
+.Description {
+  font-style: italic;
 }
 
-@media (max-width: 1000px){
-    .BurgerBuilder{
-        grid-template-areas: 
-        "title"
-        "burger"
-        "selection";
-    }
+@media (max-width: 1200px) {
+  .BurgerBuilder {
+    max-width: 500px;
+    grid-template-areas:
+      "title"
+      "burger"
+      "selection";
+  }
+
+  .Burger {
+    margin-top: -5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .BurgerBuilder {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: red;
+  }
+
+  .Burger {
+    margin-top: -5%;
+  }
 }

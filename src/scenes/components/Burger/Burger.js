@@ -1,6 +1,7 @@
 import React from "react";
 import Ingredient from "./Ingredient/Ingredient";
 import classes from "./Burger.module.css";
+import shadow from "../../../assets/burger-shadow.svg";
 
 const Burger = ({ ingredients }) => {
   //parse and populate ingredients
@@ -14,13 +15,14 @@ const Burger = ({ ingredients }) => {
     .flat(); //flatten array
 
   if (displayIngredients.length === 0)
-    displayIngredients = <p>Please start adding ingredients</p>;
+    displayIngredients = <p style={{margin: '3em 0'}}>Please start adding ingredients</p>;
 
   return (
     <div className={classes.Burger}>
       <Ingredient type="bread-top" />
       {displayIngredients}
       <Ingredient type="bread-bottom" />
+      <img className={classes.Shadow} src={shadow}></img>
     </div>
   );
 };

@@ -102,11 +102,13 @@ class BurgerBuilder extends Component {
     return (
       <article className={classes.BurgerBuilder}>
         <div className={classes.TitleContainer}>
-          <p className={classes.SubTitle}>React</p>
-          <h2 className={classes.Title}>Mystery Burger</h2>
-          <p className={classes.Description}>
-            With Delicious Ancient Secret Sauce
-          </p>
+          <div>
+            <p className={classes.SubTitle}>React</p>
+            <h2 className={classes.Title}>Mystery Burger</h2>
+            <p className={classes.Description}>
+              With Delicious Ancient Secret Sauce
+            </p>
+          </div>
         </div>
         <div className={classes.Burger}>
           <Burger ingredients={this.state.ingredients} />
