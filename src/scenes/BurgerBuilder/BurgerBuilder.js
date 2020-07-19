@@ -101,7 +101,7 @@ class BurgerBuilder extends Component {
   };
 
   resetClickHandler = () => {
-    this.setState({ ingredients: initialIngredients });
+    this.setState({ ingredients: initialIngredients, totalPrice: 16.8 });
   };
 
   render() {
