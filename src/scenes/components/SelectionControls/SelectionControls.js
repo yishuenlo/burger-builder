@@ -1,5 +1,6 @@
 import React from "react";
 import Control from "./Control/Control";
+import Button from "../../../components/UI/Button/Button"
 import classes from "./SelectionControls.module.css";
 
 const SelectionControls = ({
@@ -36,7 +37,7 @@ const SelectionControls = ({
       <p>Total Ingredients Used: {totalIngredients}/10</p>
       {warningMessage}
       <div className={classes.SelectionContainer}>{displayControls}</div>
-      <button>Reset</button>
+      <Button type="secondary" action="Reset"></Button>
       <button>Order Now</button>
     </div>
   );
