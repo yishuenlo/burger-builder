@@ -14,18 +14,20 @@ const INGREDIENT_PRICES = {
   protein: 3.75,
 };
 
+const initialIngredients = {
+  lettuce: 1,
+  onion: 1,
+  pickle: 0,
+  tomato: 0,
+  egg: 0,
+  bacon: 1,
+  cheese: 1,
+  protein: 1,
+};
+
 class BurgerBuilder extends Component {
   state = {
-    ingredients: {
-      lettuce: 1,
-      onion: 0,
-      pickle: 0,
-      tomato: 1,
-      egg: 0,
-      bacon: 0,
-      cheese: 1,
-      protein: 1,
-    },
+    ingredients: initialIngredients,
     disabledAdd: {
       lettuce: false,
       cheese: false,
@@ -98,6 +100,10 @@ class BurgerBuilder extends Component {
     });
   };
 
+  resetClickHandler = () => {
+    this.setState({ ingredients: initialIngredients });
+  };
+
   render() {
     return (
       <article className={classes.BurgerBuilder}>
@@ -125,6 +131,7 @@ class BurgerBuilder extends Component {
             disabledAdd={this.state.disabledAdd}
             disabledRemove={this.state.disabledRemove}
             price={INGREDIENT_PRICES}
+            resetClickHandler={this.resetClickHandler}
           />
         </div>
       </article>

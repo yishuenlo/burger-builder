@@ -10,7 +10,8 @@ const SelectionControls = ({
   disabledAdd,
   disabledRemove,
   totalPrice,
-  price
+  price,
+  resetClickHandler
 }) => {
 
   //loop through ingredients to create individual control
@@ -37,8 +38,12 @@ const SelectionControls = ({
       <p>Total Ingredients Used: {totalIngredients}/10</p>
       {warningMessage}
       <div className={classes.SelectionContainer}>{displayControls}</div>
-      <Button type="secondary" action="Reset"></Button>
-      <button>Order Now</button>
+      <Button
+        type="secondary"
+        action="Reset"
+        click={resetClickHandler}
+      ></Button>
+      <Button type="primary" action="Order Now"></Button>
     </div>
   );
 };

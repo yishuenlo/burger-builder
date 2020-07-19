@@ -33,6 +33,10 @@
     min-height: auto;
     margin-top: 5%;
   }
+  .Shadow {
+    width: 350px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 600px) {
