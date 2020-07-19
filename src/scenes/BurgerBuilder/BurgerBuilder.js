@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Burger from "../components/Burger/Burger";
-import ControlsPanel from "../components/ControlsPanel/ControlsPanel";
+import SelectionControls from "../components/SelectionControls/SelectionControls";
 import classes from "./BurgerBuilder.module.css";
 
 const INGREDIENT_PRICES = {
@@ -102,12 +102,16 @@ class BurgerBuilder extends Component {
     return (
       <article className={classes.BurgerBuilder}>
         <Burger ingredients={this.state.ingredients} />
-        <ControlsPanel
+        <SelectionControls
           totalPrice={this.state.totalPrice}
           ingredients={this.state.ingredients}
+          totalIngredients={Object.values(this.state.ingredients).reduce(
+            (a, b) => a + b
+          )}
           adjustIngredientHandler={this.adjustIngredientHandler}
           disabledAdd={this.state.disabledAdd}
           disabledRemove={this.state.disabledRemove}
+          price={INGREDIENT_PRICES}
         />
       </article>
     );

@@ -7,6 +7,7 @@ const Ingredient = ({ type }) => {
   return (
     <img
       src={`https://raw.githubusercontent.com/yishuenlo/burger-bulider/design/src/assets/burger-ingredients/${type}.svg`}
+      className={classes.BurgerIngredients}
     />
   );
 };

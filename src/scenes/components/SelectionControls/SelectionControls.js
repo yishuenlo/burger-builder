@@ -1,13 +1,15 @@
 import React from "react";
-import Control from "../Control/Control";
-import classes from "./ControlsPanel.module.css";
+import Control from "./Control/Control";
+import classes from "./SelectionControls.module.css";
 
-const ControlsPanel = ({
+const SelectionControls = ({
   ingredients,
+  totalIngredients,
   adjustIngredientHandler,
   disabledAdd,
   disabledRemove,
   totalPrice,
+  price
 }) => {
   const displayControls = Object.keys(ingredients).map((ingredientKey) => (
     <Control
@@ -17,16 +19,18 @@ const ControlsPanel = ({
       adjustIngredients={adjustIngredientHandler}
       disabledAdd={disabledAdd[ingredientKey]}
       disabledRemove={disabledRemove[ingredientKey]}
+      price={price}
     />
   ));
   return (
-    <div className={classes.ControlsPanel}>
-      <h2>Total Price: {totalPrice.toFixed(2)}</h2>
-      {displayControls}
+    <div className={classes.SelectionControls}>
+      <h2 className={classes.TotalPrice}>${totalPrice.toFixed(2)}</h2>
+      <p>Total Ingredients Used: ${totalIngredients}/10</p>
+      <div className={classes.SelectionContainer}>{displayControls}</div>
       <button>Reset</button>
       <button>Checkout</button>
     </div>
   );
 };
 
-export default ControlsPanel;
+export default SelectionControls;
