@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/burger-bulider/static/css/main.c2b33287.chunk.css",
-    "main.js": "/burger-bulider/static/js/main.93048b0d.chunk.js",
-    "main.js.map": "/burger-bulider/static/js/main.93048b0d.chunk.js.map",
+    "main.css": "/burger-bulider/static/css/main.a646a2ad.chunk.css",
+    "main.js": "/burger-bulider/static/js/main.a6dea8a1.chunk.js",
+    "main.js.map": "/burger-bulider/static/js/main.a6dea8a1.chunk.js.map",
     "runtime-main.js": "/burger-bulider/static/js/runtime-main.10b8273c.js",
     "runtime-main.js.map": "/burger-bulider/static/js/runtime-main.10b8273c.js.map",
-    "static/js/2.4ea4c34f.chunk.js": "/burger-bulider/static/js/2.4ea4c34f.chunk.js",
-    "static/js/2.4ea4c34f.chunk.js.map": "/burger-bulider/static/js/2.4ea4c34f.chunk.js.map",
+    "static/js/2.5cc616aa.chunk.js": "/burger-bulider/static/js/2.5cc616aa.chunk.js",
+    "static/js/2.5cc616aa.chunk.js.map": "/burger-bulider/static/js/2.5cc616aa.chunk.js.map",
     "index.html": "/burger-bulider/index.html",
-    "precache-manifest.a851e2b134c901095c72d51e06cf1df2.js": "/burger-bulider/precache-manifest.a851e2b134c901095c72d51e06cf1df2.js",
+    "precache-manifest.9537c759f7ae3458e543373fecc44f8f.js": "/burger-bulider/precache-manifest.9537c759f7ae3458e543373fecc44f8f.js",
     "service-worker.js": "/burger-bulider/service-worker.js",
-    "static/css/main.c2b33287.chunk.css.map": "/burger-bulider/static/css/main.c2b33287.chunk.css.map",
-    "static/js/2.4ea4c34f.chunk.js.LICENSE.txt": "/burger-bulider/static/js/2.4ea4c34f.chunk.js.LICENSE.txt",
+    "static/css/main.a646a2ad.chunk.css.map": "/burger-bulider/static/css/main.a646a2ad.chunk.css.map",
+    "static/js/2.5cc616aa.chunk.js.LICENSE.txt": "/burger-bulider/static/js/2.5cc616aa.chunk.js.LICENSE.txt",
     "static/media/Burger.module.css": "/burger-bulider/static/media/background.a5915259.svg",
     "static/media/bacon.svg": "/burger-bulider/static/media/bacon.ab5dc788.svg",
     "static/media/burger-shadow.svg": "/burger-bulider/static/media/burger-shadow.0fc37243.svg",
@@ -25,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.10b8273c.js",
-    "static/js/2.4ea4c34f.chunk.js",
-    "static/css/main.c2b33287.chunk.css",
-    "static/js/main.93048b0d.chunk.js"
+    "static/js/2.5cc616aa.chunk.js",
+    "static/css/main.a646a2ad.chunk.css",
+    "static/js/main.a6dea8a1.chunk.js"
   ]
 }
