@@ -1,3 +1,52 @@
 .BurgerBuilder{
-    text-align: center;
+    width: 80%;
+    max-width: 1150px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+        "burger burger burger title"
+        "burger burger burger selection";
+}
+
+.Burger{
+    grid-area: burger;
+    align-self: center;
+    min-height: 100vh;
+}
+
+.TitleContainer{
+    grid-area: title;
+}
+
+.SelectionControls{
+    grid-area: selection;
+}
+
+.Title {
+    width: 20%;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 0.8em;
+    margin-bottom: 0.2em;
+}
+
+.SubTitle{
+    font-size: 3em;
+    font-family: 'Reenie Beanie', cursive;
+    line-height: 1em;
+}
+
+.Description{
+    font-style: italic;
+}
+
+@media (max-width: 1000px){
+    .BurgerBuilder{
+        grid-template-areas: 
+        "title"
+        "burger"
+        "selection";
+    }
 }

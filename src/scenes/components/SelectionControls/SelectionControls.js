@@ -11,6 +11,8 @@ const SelectionControls = ({
   totalPrice,
   price
 }) => {
+
+  //loop through ingredients to create individual control
   const displayControls = Object.keys(ingredients).map((ingredientKey) => (
     <Control
       key={ingredientKey}
@@ -22,13 +24,20 @@ const SelectionControls = ({
       price={price}
     />
   ));
+
+  const warningMessage =
+    totalIngredients >= 10 ? (
+      <p className={classes.Warning}>You've reached your total ingredient limits.</p>
+    ) : null;
+
   return (
     <div className={classes.SelectionControls}>
       <h2 className={classes.TotalPrice}>${totalPrice.toFixed(2)}</h2>
       <p>Total Ingredients Used: ${totalIngredients}/10</p>
+      {warningMessage}
       <div className={classes.SelectionContainer}>{displayControls}</div>
       <button>Reset</button>
-      <button>Checkout</button>
+      <button>Order Now</button>
     </div>
   );
 };

@@ -1,15 +1,12 @@
 .SelectionControls {
-    width: 50%;
-    display: flex;
-    flex-flow: column;
-    /* align-items: center; */
+    width: 100%;
     margin: 0 auto;
     padding: 2em 0;
     text-align: left;
 }
 
 .TotalPrice {
-    color: #FF9300;
+    color: var(--accent);
     line-height: 1em;
     text-align: left;
     font-weight: 700;
@@ -20,8 +17,17 @@
 .SelectionContainer {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     gap: 1em;
     margin: 2em auto;
     /* background-color: red; */
+}
+
+.Warning {
+    display: inline-block;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.25em 1em;
+    border-radius: 1em;
+    margin-top: 1em;
 }

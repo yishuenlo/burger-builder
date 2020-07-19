@@ -28,7 +28,7 @@ const Control = ({
     <img
       src={require(`../../../../assets/ingredients-icon/${label}.svg`)}
     ></img>
-    <p className={classes.Label}>{label.toUpperCase()}</p>
+    <p className={classes.Label}>{label}</p>
     <p className={classes.PriceTag}>+${price[label]}</p>
   </div>
 );

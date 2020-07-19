@@ -101,18 +101,30 @@ class BurgerBuilder extends Component {
   render() {
     return (
       <article className={classes.BurgerBuilder}>
-        <Burger ingredients={this.state.ingredients} />
-        <SelectionControls
-          totalPrice={this.state.totalPrice}
-          ingredients={this.state.ingredients}
-          totalIngredients={Object.values(this.state.ingredients).reduce(
-            (a, b) => a + b
-          )}
-          adjustIngredientHandler={this.adjustIngredientHandler}
-          disabledAdd={this.state.disabledAdd}
-          disabledRemove={this.state.disabledRemove}
-          price={INGREDIENT_PRICES}
-        />
+        <div className={classes.TitleContainer}>
+          <p className={classes.SubTitle}>React</p>
+          <h2 className={classes.Title}>Mystery Burger</h2>
+          <p className={classes.Description}>
+            With Delicious Ancient Secret Sauce
+          </p>
+        </div>
+        <div className={classes.Burger}>
+          <Burger ingredients={this.state.ingredients} />
+        </div>
+
+        <div className={classes.SelectionControls}>
+          <SelectionControls
+            totalPrice={this.state.totalPrice}
+            ingredients={this.state.ingredients}
+            totalIngredients={Object.values(this.state.ingredients).reduce(
+              (a, b) => a + b
+            )}
+            adjustIngredientHandler={this.adjustIngredientHandler}
+            disabledAdd={this.state.disabledAdd}
+            disabledRemove={this.state.disabledRemove}
+            price={INGREDIENT_PRICES}
+          />
+        </div>
       </article>
     );
   }
