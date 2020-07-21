@@ -1,7 +1,7 @@
 {
   "name": "burger-builder",
   "version": "0.1.0",
-  "homepage": "https://yishuenlo.github.io/burger-bulider",
+  "homepage": "https://yishuenlo.github.io/burger-builder",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

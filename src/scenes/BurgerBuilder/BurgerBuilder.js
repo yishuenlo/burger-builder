@@ -17,9 +17,9 @@ const INGREDIENT_PRICES = {
 const initialIngredients = {
   lettuce: 1,
   onion: 1,
-  pickle: 0,
-  tomato: 0,
-  egg: 0,
+  pickle: 1,
+  tomato: 1,
+  egg: 1,
   bacon: 1,
   cheese: 1,
   protein: 1,
