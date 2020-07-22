@@ -24,7 +24,7 @@ const Burger = ({ ingredients }) => {
         {displayIngredients}
         <Ingredient type="bread-bottom" />
       </div>
-      <img className={classes.Shadow} src={shadow}></img>
+      <img className={classes.Shadow} src={shadow} alt="burger shadow"></img>
     </div>
   );
 };

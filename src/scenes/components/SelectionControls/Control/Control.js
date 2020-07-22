@@ -5,6 +5,7 @@ const Control = ({
   label,
   quantity,
   adjustIngredients,
+  checkIngredientsQuant,
   disabledAdd,
   disabledRemove,
   price
@@ -12,14 +13,14 @@ const Control = ({
   <div className={classes.Control}>
     <div className={classes.Selection}>
       <button
-        onClick={() => adjustIngredients(label, "remove")}
+        onClick={() => adjustIngredients(label, "remove", checkIngredientsQuant)}
         disabled={disabledRemove}
       >
         -
       </button>
       <p>{quantity}</p>
       <button
-        onClick={() => adjustIngredients(label, "add")}
+        onClick={() => adjustIngredients(label, "add", checkIngredientsQuant)}
         disabled={disabledAdd}
       >
         +
@@ -27,6 +28,7 @@ const Control = ({
     </div>
     <img
       src={require(`../../../../assets/ingredients-icon/${label}.svg`)}
+      alt={label}
     ></img>
     <p className={classes.Label}>{label}</p>
     <p className={classes.PriceTag}>+${price[label]}</p>

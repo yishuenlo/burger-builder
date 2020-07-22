@@ -25,48 +25,27 @@ const initialIngredients = {
   protein: 1,
 };
 
+const initialPrice = Object.values(INGREDIENT_PRICES).reduce((a, b) => a + b);
+
+const initialTotalIngredients = Object.values(initialIngredients).reduce(
+  (sum, cur) => sum + cur
+);
+
 class BurgerBuilder extends Component {
+  constructor(props) {
+    super(props);
+    this.resetSelectionControls = React.createRef();
+  }
+
   state = {
     ingredients: initialIngredients,
-    disabledAdd: {
-      lettuce: false,
-      cheese: false,
-      bacon: false,
-      protein: false,
-    },
-    disabledRemove: {
-      lettuce: false,
-      cheese: false,
-      bacon: false,
-      protein: false,
-    },
+    totalIngredients: initialTotalIngredients,
     purchasable: false,
-    totalPrice: 16.8,
+    totalPrice: initialPrice,
   };
 
-  //disabled buttons based on ingredient quantities
-  checkIngredientsQuant = (ingredients) => {
-    const updatedDisabledAdd = { ...this.state.disabledAdd };
-    const updatedDisabledRemove = { ...this.state.disabledRemove };
-
-    //set total ingredients to limit of 10
-    const totalIngredients = Object.values(ingredients).reduce(
-      (sum, cur) => sum + cur
-    );
-
-    for (let key in ingredients) {
-      //if more than 2 for each ingredient, disable add button OR
-      //if more than 10, disable ALL add buttons
-      updatedDisabledAdd[key] = ingredients[key] > 1 || totalIngredients >= 10;
-      updatedDisabledRemove[key] = ingredients[key] <= 0;
-    }
-    this.setState({
-      disabledAdd: updatedDisabledAdd,
-      disabledRemove: updatedDisabledRemove,
-    });
-  };
-
-  adjustIngredientHandler = (type, action) => {
+  //fn for disable add/remove buttons in SelectionControls
+  adjustIngredientHandler = (type, action, fn) => {
     //create copy of original ingredient obj
     const updatedIngredients = {
       ...this.state.ingredients,
@@ -91,17 +70,25 @@ class BurgerBuilder extends Component {
         ? prevPrice - INGREDIENT_PRICES[type]
         : prevPrice;
 
-    this.checkIngredientsQuant(updatedIngredients);
+    fn(updatedIngredients);
 
     //update state
     this.setState({
       ingredients: updatedIngredients,
+      totalIngredients: Object.values(updatedIngredients).reduce(
+        (sum, cur) => sum + cur
+      ),
       totalPrice: updatedPrice,
     });
   };
 
   resetClickHandler = () => {
-    this.setState({ ingredients: initialIngredients, totalPrice: 16.8 });
+    this.setState({
+      ingredients: initialIngredients,
+      totalIngredients: initialTotalIngredients,
+      totalPrice: initialPrice,
+    });
+    this.resetSelectionControls.current.resetStates();
   };
 
   render() {
@@ -124,9 +111,8 @@ class BurgerBuilder extends Component {
           <SelectionControls
             totalPrice={this.state.totalPrice}
             ingredients={this.state.ingredients}
-            totalIngredients={Object.values(this.state.ingredients).reduce(
-              (a, b) => a + b
-            )}
+            totalIngredients={this.state.totalIngredients}
+            ref={this.resetSelectionControls}
             adjustIngredientHandler={this.adjustIngredientHandler}
             disabledAdd={this.state.disabledAdd}
             disabledRemove={this.state.disabledRemove}

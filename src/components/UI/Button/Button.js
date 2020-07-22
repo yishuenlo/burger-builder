@@ -12,6 +12,7 @@ const Button = ({ type, action, click }) => {
     case "secondary":
       style = classes.Secondary;
       break;
+    default: style = classes.Primary;
   }
 
   return <button className={style} onClick={click}>{action}</button>;
