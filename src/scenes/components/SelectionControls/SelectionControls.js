@@ -3,18 +3,15 @@ import Control from "./Control/Control";
 import Button from "../../../components/UI/Button/Button";
 import classes from "./SelectionControls.module.css";
 
-const calcTotal = (ingredients) =>
-  Object.values(ingredients).reduce((sum, cur) => sum + cur);
-
 class SelectionControls extends Component {
   //managing button states - enabled or disabled
   state = {
     disabledAdd: {},
     disabledRemove: {},
-    // totalIngredients: calcTotal(this.props.ingredients),
   };
 
   //disabled buttons based on ingredient quantities
+  //works with BurgerBuilder's adjustIngredientHandler to handle onClick events on add & remove buttons
   checkIngredientsQuant = (ingredients) => {
     const updatedDisabledAdd = { ...this.state.disabledAdd };
     const updatedDisabledRemove = { ...this.state.disabledRemove };
@@ -27,30 +24,35 @@ class SelectionControls extends Component {
       updatedDisabledRemove[key] = ingredients[key] <= 0;
     }
 
-    const updatedTotal = calcTotal(ingredients);
+    //calcuate updated total based on input ingredients obj
+    const updatedTotal = Object.values(ingredients).reduce(
+      (sum, cur) => sum + cur
+    );
 
+    //if total is greater than 10, disable ALL add buttons
     if (updatedTotal >= 10) {
       for (let key in ingredients) {
         updatedDisabledAdd[key] = true;
       }
     }
 
+    //update state
     this.setState({
       disabledAdd: updatedDisabledAdd,
       disabledRemove: updatedDisabledRemove,
-      // totalIngredients: calcTotal(ingredients),
     });
   };
 
+  //reset state for reset button
   resetStates = () => {
     this.setState({
-      // totalIngredients: calcTotal(this.props.ingredients),
       disabledAdd: {},
       disabledRemove: {},
     });
   };
 
   render() {
+    //destructure props
     const {
       ingredients,
       totalIngredients,
@@ -81,6 +83,7 @@ class SelectionControls extends Component {
           You've reached your total ingredient limit.
         </p>
       ) : null;
+
     return (
       <div className={classes.SelectionControls}>
         <h2 className={classes.TotalPrice}>${totalPrice.toFixed(2)}</h2>

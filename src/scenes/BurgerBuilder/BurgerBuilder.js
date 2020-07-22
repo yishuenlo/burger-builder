@@ -14,6 +14,7 @@ const INGREDIENT_PRICES = {
   protein: 3.75,
 };
 
+//set initial values
 const initialIngredients = {
   lettuce: 1,
   onion: 1,
@@ -31,17 +32,20 @@ const initialTotalIngredients = Object.values(initialIngredients).reduce(
   (sum, cur) => sum + cur
 );
 
+//start component
 class BurgerBuilder extends Component {
   constructor(props) {
     super(props);
+
+    //use ref to reset SelectionControls' states with reset button
     this.resetSelectionControls = React.createRef();
   }
 
   state = {
     ingredients: initialIngredients,
     totalIngredients: initialTotalIngredients,
-    purchasable: false,
     totalPrice: initialPrice,
+    purchasable: false,
   };
 
   //fn for disable add/remove buttons in SelectionControls
@@ -70,6 +74,7 @@ class BurgerBuilder extends Component {
         ? prevPrice - INGREDIENT_PRICES[type]
         : prevPrice;
 
+    //enable & disable buttons using checkIngredientsQuant in SelectionControls component
     fn(updatedIngredients);
 
     //update state
@@ -82,12 +87,16 @@ class BurgerBuilder extends Component {
     });
   };
 
+  //reset button
   resetClickHandler = () => {
+    //reset this component's state
     this.setState({
       ingredients: initialIngredients,
       totalIngredients: initialTotalIngredients,
       totalPrice: initialPrice,
     });
+
+    //reset SelectionControls' states
     this.resetSelectionControls.current.resetStates();
   };
 
@@ -103,6 +112,7 @@ class BurgerBuilder extends Component {
             </p>
           </div>
         </div>
+        
         <div className={classes.Burger}>
           <Burger ingredients={this.state.ingredients} />
         </div>
