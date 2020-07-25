@@ -4,6 +4,7 @@
 :root{
   --main: #641111;
   --accent: #FF9300;
+  --background: #F8FFF1;
 }
 
 html, body, h1, h2, h3, h4, p, div, article, section, a, button {
@@ -21,7 +22,7 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F8FFF1;
+  background-color: var(--background);
 }
 
 code {

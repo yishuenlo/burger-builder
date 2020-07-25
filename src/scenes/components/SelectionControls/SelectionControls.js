@@ -60,6 +60,7 @@ class SelectionControls extends Component {
       totalPrice,
       price,
       resetClickHandler,
+      purchasingHandler,
     } = this.props;
 
     //loop through ingredients to create individual control
@@ -95,7 +96,7 @@ class SelectionControls extends Component {
           action="Reset"
           click={resetClickHandler}
         ></Button>
-        <Button type="primary" action="Order Now"></Button>
+        <Button type="primary" action="Order Now" click={purchasingHandler}></Button>
       </div>
     );
   }

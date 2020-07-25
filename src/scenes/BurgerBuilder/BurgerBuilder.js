@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Burger from "../components/Burger/Burger";
 import SelectionControls from "../components/SelectionControls/SelectionControls";
 import classes from "./BurgerBuilder.module.css";
+import Modal from "../../components/UI/Modal/Modal";
+import OrderSummary from "../components/OrderSummary/OrderSummary";
 
 const INGREDIENT_PRICES = {
   lettuce: 0.25,
@@ -46,6 +48,7 @@ class BurgerBuilder extends Component {
     totalIngredients: initialTotalIngredients,
     totalPrice: initialPrice,
     purchasable: false,
+    purchasing: false,
   };
 
   //fn for disable add/remove buttons in SelectionControls
@@ -100,9 +103,26 @@ class BurgerBuilder extends Component {
     this.resetSelectionControls.current.resetStates();
   };
 
+  purchasingHandler = () => {
+    //toggle purchasing true/false
+    this.setState((state) => ({purchasing: !this.state.purchasing}));
+  }
+
+  
+
   render() {
     return (
       <article className={classes.BurgerBuilder}>
+        <Modal
+          show={this.state.purchasing}
+          purchasingHandler={this.purchasingHandler}
+        >
+          <OrderSummary
+            ingredients={this.state.ingredients}
+            purchasingHandler={this.purchasingHandler}
+          />
+        </Modal>
+
         <div className={classes.TitleContainer}>
           <div>
             <p className={classes.SubTitle}>React</p>
@@ -112,7 +132,7 @@ class BurgerBuilder extends Component {
             </p>
           </div>
         </div>
-        
+
         <div className={classes.Burger}>
           <Burger ingredients={this.state.ingredients} />
         </div>
@@ -128,6 +148,7 @@ class BurgerBuilder extends Component {
             disabledRemove={this.state.disabledRemove}
             price={INGREDIENT_PRICES}
             resetClickHandler={this.resetClickHandler}
+            purchasingHandler={this.purchasingHandler}
           />
         </div>
       </article>
