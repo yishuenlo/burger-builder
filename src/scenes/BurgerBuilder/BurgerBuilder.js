@@ -20,15 +20,16 @@ const INGREDIENT_PRICES = {
 const initialIngredients = {
   lettuce: 1,
   onion: 1,
-  pickle: 1,
-  tomato: 1,
-  egg: 1,
+  pickle: 0,
+  tomato: 0,
+  egg: 0,
   bacon: 1,
   cheese: 1,
   protein: 1,
 };
 
-const initialPrice = Object.values(INGREDIENT_PRICES).reduce((a, b) => a + b);
+//calculate initial price based on prices and number of initial ingredients
+const initialPrice = Object.keys(INGREDIENT_PRICES).reduce((total, cur) => total += INGREDIENT_PRICES[cur] * initialIngredients[cur], 0);
 
 const initialTotalIngredients = Object.values(initialIngredients).reduce(
   (sum, cur) => sum + cur
@@ -119,6 +120,7 @@ class BurgerBuilder extends Component {
         >
           <OrderSummary
             ingredients={this.state.ingredients}
+            totalPrice={this.state.totalPrice}
             purchasingHandler={this.purchasingHandler}
           />
         </Modal>

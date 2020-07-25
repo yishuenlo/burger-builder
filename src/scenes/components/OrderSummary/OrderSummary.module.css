@@ -1,27 +1,27 @@
 .Summary {
-    margin-bottom: 12px;
-    z-index: 200;
+  margin-bottom: 3em;
 }
 
 .List {
-    list-style-type: none;
-    margin: 2em 0;
-    padding: 0;
-    text-transform: capitalize;
+  list-style-type: none;
+  margin: 2em 0;
+  padding: 0;
 }
 
-.List li{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    margin-bottom: 1em;
+.List li {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 1em;
 }
 
 .IngredientName {
-    font-weight: 500;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-right: 4px;
 }
 
 .Icon {
-    width: 30px;
-    margin-right: 1em;
+  width: 30px;
+  margin-right: 1em;
 }
