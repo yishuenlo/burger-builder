@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df52b4d289282e0a2f59b5dc0c486d53",
+    "revision": "2bb57d3340b5bc97fcf479d16e4e4c72",
     "url": "/burger-builder/index.html"
   },
   {
-    "revision": "d6fa4a40f0bcbe584579",
-    "url": "/burger-builder/static/css/main.a800c35f.chunk.css"
+    "revision": "55d7612c939e49bfffed",
+    "url": "/burger-builder/static/css/main.d4379e21.chunk.css"
   },
   {
-    "revision": "20460be6f4db2ba3243c",
-    "url": "/burger-builder/static/js/2.a45b7ad1.chunk.js"
+    "revision": "4d305cd7958c4fc39c3f",
+    "url": "/burger-builder/static/js/2.71dccba5.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/burger-builder/static/js/2.a45b7ad1.chunk.js.LICENSE.txt"
+    "url": "/burger-builder/static/js/2.71dccba5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d6fa4a40f0bcbe584579",
-    "url": "/burger-builder/static/js/main.2aaa3a22.chunk.js"
+    "revision": "55d7612c939e49bfffed",
+    "url": "/burger-builder/static/js/main.6655ac8b.chunk.js"
   },
   {
     "revision": "3743a9caf0853cc6f96a",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0fc37243bddbe304224d4f21d068e73a",
     "url": "/burger-builder/static/media/burger-shadow.0fc37243.svg"
+  },
+  {
+    "revision": "2175213282a8d83ee36b59f622462521",
+    "url": "/burger-builder/static/media/cart-icon.21752132.svg"
   },
   {
     "revision": "db4301d48ae06d992e40b29ccf36e18f",

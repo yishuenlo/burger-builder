@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/burger-builder/static/css/main.a800c35f.chunk.css",
-    "main.js": "/burger-builder/static/js/main.2aaa3a22.chunk.js",
-    "main.js.map": "/burger-builder/static/js/main.2aaa3a22.chunk.js.map",
+    "main.css": "/burger-builder/static/css/main.d4379e21.chunk.css",
+    "main.js": "/burger-builder/static/js/main.6655ac8b.chunk.js",
+    "main.js.map": "/burger-builder/static/js/main.6655ac8b.chunk.js.map",
     "runtime-main.js": "/burger-builder/static/js/runtime-main.f3cd13ce.js",
     "runtime-main.js.map": "/burger-builder/static/js/runtime-main.f3cd13ce.js.map",
-    "static/js/2.a45b7ad1.chunk.js": "/burger-builder/static/js/2.a45b7ad1.chunk.js",
-    "static/js/2.a45b7ad1.chunk.js.map": "/burger-builder/static/js/2.a45b7ad1.chunk.js.map",
+    "static/js/2.71dccba5.chunk.js": "/burger-builder/static/js/2.71dccba5.chunk.js",
+    "static/js/2.71dccba5.chunk.js.map": "/burger-builder/static/js/2.71dccba5.chunk.js.map",
     "index.html": "/burger-builder/index.html",
-    "precache-manifest.f43eceb4f485c730aad378bb2f697d4d.js": "/burger-builder/precache-manifest.f43eceb4f485c730aad378bb2f697d4d.js",
+    "precache-manifest.53b4b38982d97c0e18533d6538daa6ae.js": "/burger-builder/precache-manifest.53b4b38982d97c0e18533d6538daa6ae.js",
     "service-worker.js": "/burger-builder/service-worker.js",
-    "static/css/main.a800c35f.chunk.css.map": "/burger-builder/static/css/main.a800c35f.chunk.css.map",
-    "static/js/2.a45b7ad1.chunk.js.LICENSE.txt": "/burger-builder/static/js/2.a45b7ad1.chunk.js.LICENSE.txt",
+    "static/css/main.d4379e21.chunk.css.map": "/burger-builder/static/css/main.d4379e21.chunk.css.map",
+    "static/js/2.71dccba5.chunk.js.LICENSE.txt": "/burger-builder/static/js/2.71dccba5.chunk.js.LICENSE.txt",
     "static/media/Burger.module.css": "/burger-builder/static/media/background.a5915259.svg",
     "static/media/bacon.svg": "/burger-builder/static/media/bacon.ab5dc788.svg",
     "static/media/burger-shadow.svg": "/burger-builder/static/media/burger-shadow.0fc37243.svg",
+    "static/media/cart-icon.svg": "/burger-builder/static/media/cart-icon.21752132.svg",
     "static/media/cheese.svg": "/burger-builder/static/media/cheese.db4301d4.svg",
     "static/media/egg.svg": "/burger-builder/static/media/egg.960982b8.svg",
     "static/media/lettuce.svg": "/burger-builder/static/media/lettuce.4e007865.svg",
@@ -25,8 +26,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f3cd13ce.js",
-    "static/js/2.a45b7ad1.chunk.js",
-    "static/css/main.a800c35f.chunk.css",
-    "static/js/main.2aaa3a22.chunk.js"
+    "static/js/2.71dccba5.chunk.js",
+    "static/css/main.d4379e21.chunk.css",
+    "static/js/main.6655ac8b.chunk.js"
   ]
 }
