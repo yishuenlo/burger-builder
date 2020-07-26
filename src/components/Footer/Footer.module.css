@@ -1,32 +1,39 @@
 .FooterContainer {
-    font-size: 14px;
-    width: 80%;
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: 200px auto 200px;
-    margin: 2em auto;
+  font-size: 14px;
+  width: 80%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  margin: 2em auto;
 }
 
-.Footer a{
-    color: var(--main);
-    transition: 400ms all ease-in;
+.Footer a {
+  color: var(--main);
+  transition: 400ms all ease-in;
 }
 
-.Footer a:hover{
-    color: var(--accent);
+.Footer a:hover {
+  color: var(--accent);
 }
 
 .Author {
-    grid-column: 1;
+  grid-column: 1;
 }
 
 .Course {
-    grid-column: 3;
-    justify-self: flex-end;
+  grid-column: 3;
+  justify-self: flex-end;
 }
 
 @media (max-width: 1200px) {
   .FooterContainer {
     max-width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .FooterContainer {
+    width: 90%;
+    grid-template-columns: 1fr;
   }
 }

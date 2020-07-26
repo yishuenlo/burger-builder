@@ -50,3 +50,10 @@
     max-width: 500px;
   }
 }
+
+@media (max-width: 500px) {
+  .HeaderContainer {
+    width: 90%;
+    grid-template-columns: auto;
+  }
+}
