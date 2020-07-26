@@ -1,7 +1,7 @@
 .Burger {
   box-sizing: border-box;
   text-align: center;
-  min-height: 680px;
+  /* min-height: 680px; */
   max-width: 600px;
   display: flex;
   flex-direction: column;
